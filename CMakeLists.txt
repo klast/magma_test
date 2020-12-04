@@ -245,4 +245,4 @@ set_property(SOURCE ${SOURCES_CPU} ${PY_MAP_BUILDER_MAIN} ${MAP_BUILDER_MAIN}
    include_directories($ENV{MAGMA_ROOT}/include)
    target_link_directories(magma_test PRIVATE $ENV{MAGMA_ROOT}/lib)
    target_link_libraries(magma_test PRIVATE magma)
-   target_link_libraries(magma_test PRIVATE cublas cusparse cusolver)
+   target_link_libraries(magma_test PRIVATE cublas cusparse cusolver cudadevrt.lib cudart_static.lib)
